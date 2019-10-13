@@ -5,48 +5,48 @@ var questions = {
              "answer3":"var arr = [1,2,3,4,5]",
              "answer4":"document.ray",
              "correctAnswer":"3"},
-"question2":{"text":"What is an Array?",
-             "answer1":"banana",
-             "answer2":"banana",
-             "answer3":"banana",
-             "answer4":"banana",
+"question2":{"text":"What does \"var\" do?",
+             "answer1":"initalizes a variable",
+             "answer2":"turns a value into a varible",
+             "answer3":"allow a values to change",
+             "answer4":"spells far wrong",
              "correctAnswer":"1"},
-"question3":{"text":"What is an Array?",
-             "answer1":"banana",
-             "answer2":"banana",
-             "answer3":"banana",
-             "answer4":"banana",
+"question3":{"text":"What are functions NOT used for",
+             "answer1":"Creating a repeatable set of instructions",
+             "answer2":"Organizing code",
+             "answer3":"input and outputs",
+             "answer4":"storing data",
+             "correctAnswer":"4"},
+"question4":{"text":"what is a method??",
+             "answer1":"A way we do things",
+             "answer2":"A function as an object",
+             "answer3":"a type of array",
+             "answer4":"an object",
+             "correctAnswer":"2"},
+"question5":{"text":"What is bootstap used for?",
+             "answer1":"Simplifying the way we stlye pages",
+             "answer2":"A Javascript API",
+             "answer3":"Structuring Pages",
+             "answer4":"Keep your shoes on",
              "correctAnswer":"1"},
-"question4":{"text":"What is an Array?",
-             "answer1":"banana",
-             "answer2":"banana",
-             "answer3":"banana",
-             "answer4":"banana",
-             "correctAnswer":"1"},
-"question5":{"text":"What is an Array?",
-             "answer1":"banana",
-             "answer2":"banana",
-             "answer3":"banana",
-             "answer4":"banana",
-             "correctAnswer":"1"},
-"question6":{"text":"What is an Array?",
-             "answer1":"banana",
-             "answer2":"banana",
-             "answer3":"banana",
-             "answer4":"banana",
-             "correctAnswer":"1"},
-"question7":{"text":"What is an Array?",
-             "answer1":"banana",
-             "answer2":"banana",
-             "answer3":"banana",
-             "answer4":"banana",
-             "correctAnswer":"1"},
-"question8":{"text":"What is an Array?",
-             "answer1":"banana",
-             "answer2":"banana",
-             "answer3":"banana",
-             "answer4":"banana",
-             "correctAnswer":"1"}
+"question6":{"text":"Which opporator do we use to concatinate strings",
+             "answer1":"&",
+             "answer2":"*",
+             "answer3":"^",
+             "answer4":"+",
+             "correctAnswer":"4"},
+"question7":{"text":"Which tool is not used for we development",
+             "answer1":"HTLM",
+             "answer2":"CSS",
+             "answer3":"Python",
+             "answer4":"Javascript",
+             "correctAnswer":"3"},
+"question8":{"text":"What is the answer to life?",
+             "answer1":"Jesus",
+             "answer2":"Bananas",
+             "answer3":"42",
+             "answer4":"Who's asking?",
+             "correctAnswer":"3"}
 } 
 var highScore = {};
 var answerArr = [];
@@ -249,14 +249,15 @@ document.getElementsByClassName("scoreText")[0].innerHTML= "You got "+score + " 
 
 
 }
-
+var loadArr
 function loadHighScores(){
 currentLS = localStorage;
 var count = 0;
-for (item in localStorage["pastWinners"]){
+loadArr = JSON.parse(localStorage.getItem("pastWinners"))
+for (item in loadArr){
     ulEl = document.getElementsByClassName("winList")[0];
     var li = document.createElement("li");
-    li.innerHTML = (count + 1)+") "+item +" score: " +localStorage["pastWinners"]
+    li.innerHTML = (count + 1)+") "+item +" score: " +loadArr[count];
     ulEl.appendChild(li);
     count++;
     listCount = count;
@@ -267,6 +268,6 @@ for (item in localStorage["pastWinners"]){
 function saveHighScores(){
 winnerCount = "winner"+listCount
     var name = document.getElementsByClassName("Nickname").value;
-var currentObj = {"name":name, "score":score}
-    localStorage["pastWinners"].setItem(winnerCount,JSON.stringify(currentObj))
+var currentObj = name+": "+score;
+    localStorage.setItem("pastWinners",JSON.stringify(loadArr))
 }
