@@ -59,6 +59,7 @@ timeEl.innerHTML = "Time Left: "+timeAllowed;
 var index = 1;
 var currentQuestion  = 0;
 var mainTime;
+var loadArr = [];
 loadHighScores();
 var listCount;
 
@@ -249,7 +250,7 @@ document.getElementsByClassName("scoreText")[0].innerHTML= "You got "+score + " 
 
 
 }
-var loadArr
+
 function loadHighScores(){
 currentLS = localStorage;
 var count = 0;
@@ -257,7 +258,7 @@ loadArr = JSON.parse(localStorage.getItem("pastWinners"))
 for (item in loadArr){
     ulEl = document.getElementsByClassName("winList")[0];
     var li = document.createElement("li");
-    li.innerHTML = (count + 1)+") "+item +" score: " +loadArr[count];
+    li.innerHTML = (count+1)+ ") "+loadArr[count];
     ulEl.appendChild(li);
     count++;
     listCount = count;
@@ -267,7 +268,8 @@ for (item in loadArr){
 
 function saveHighScores(){
 winnerCount = "winner"+listCount
-    var name = document.getElementsByClassName("Nickname").value;
+    var name = document.getElementsByClassName("Nickname")[0].value;
 var currentObj = name+": "+score;
+loadArr.push(currentObj);
     localStorage.setItem("pastWinners",JSON.stringify(loadArr))
 }
