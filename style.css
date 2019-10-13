@@ -1,0 +1,79 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+hr{
+    width: 90%;
+    border-top: 1px solid rgb(199, 199, 199);
+}
+.mainDiv, .firstDiv, .endDiv{
+    width: 70%;
+    height:400px;
+    border: 2px solid rgb(187, 187, 187);
+    border-radius: 10px;
+    padding:20px;
+    margin:40px auto;
+    box-shadow: 2px 2px 10px rgb(145, 145, 145);
+}
+.endDiv{
+    display:none;
+}
+
+.answer{
+    text-align: center;
+}
+.selections{
+    width:80%;
+    margin: 0 auto;
+    height:25px;
+    margin-left:10%;
+}
+
+.sumbit{
+    width:auto;
+}
+.submitButton{
+border:none;
+width:50%;
+
+max-width: none;
+height:30px;
+margin:0px 25%;
+}
+.submitButton:hover{
+    background-color: rgb(228, 228, 228);
+    box-shadow: 2px 2px 10px rgb(209, 104, 104);
+    transition:.4s;
+}
+.submitButton{
+    background-color: rgb(230, 230, 230);
+    box-shadow: none;
+    transition:.4s;
+}
+
+.timer{
+position:fixed;
+top:0px;
+right:0px;
+padding:10px;
+
+}
+.mainDiv{
+    display:none;
+    transition:.2s;
+}
+.myBtn{
+
+    position:fixed!important;
+    top:0px!important;
+    left:0px!important;
+    width:100px;
+    height:30px;
+    font-size:10px;
+}
+.startButton{
+    width:30%;
+    height : 20%;
+    margin:35% 35%;
+    background-color:rgb(141, 141, 214);
+    border:none;
+}
