@@ -270,6 +270,6 @@ function saveHighScores(){
 winnerCount = "winner"+listCount
     var name = document.getElementsByClassName("Nickname")[0].value;
 var currentObj = name+": "+score;
-loadArr.push(currentObj);
+loadArr.push(JSON.stringify(currentObj));
     localStorage.setItem("pastWinners",JSON.stringify(loadArr))
 }
