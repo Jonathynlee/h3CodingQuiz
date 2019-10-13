@@ -73,7 +73,10 @@ padding:10px;
 .startButton{
     width:30%;
     height : 20%;
-    margin:35% 35%;
+    margin:150px 35%;
     background-color:rgb(141, 141, 214);
     border:none;
+}
+.startButton:hover{
+    background-color: grey;
 }

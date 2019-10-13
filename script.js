@@ -1,10 +1,10 @@
 var questions = {
-"question1":{"text":"What is an Array?",
-             "answer1":"banana",
-             "answer2":"banana",
-             "answer3":"banana",
-             "answer4":"banana",
-             "correctAnswer":"1"},
+"question1":{"text":"What is an example of an Array?",
+             "answer1":"var arr = 5",
+             "answer2":"var arr = {\"number\":\"5\"}",
+             "answer3":"var arr = [1,2,3,4,5]",
+             "answer4":"document.ray",
+             "correctAnswer":"3"},
 "question2":{"text":"What is an Array?",
              "answer1":"banana",
              "answer2":"banana",
@@ -244,6 +244,7 @@ document.getElementsByClassName("endDiv")[0].style.display = "block";
 clearInterval(mainTime);
 
 document.getElementsByClassName("timer")[0].style.display ="none";
+document.getElementsByClassName("scoreText")[0].innerHTML= "You got "+score + " correct";
 };
 
 
