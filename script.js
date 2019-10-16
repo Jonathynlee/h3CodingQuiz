@@ -62,6 +62,7 @@ var mainTime;
 var loadArr = [];
 loadHighScores();
 var listCount;
+var submission =false;
 
 
 for (question in questions){
@@ -254,6 +255,7 @@ document.getElementsByClassName("scoreText")[0].innerHTML= "You got "+score + " 
 function loadHighScores(){
 currentLS = localStorage;
 var count = 0;
+if (localStorage != null && localStorage != undefined){
 loadArr = JSON.parse(localStorage.getItem("pastWinners"))
 for (item in loadArr){
     ulEl = document.getElementsByClassName("winList")[0];
@@ -263,13 +265,24 @@ for (item in loadArr){
     count++;
     listCount = count;
 }
+}else{
+    loadArr = [];
+    localStorage.setItem("pastWinners",JSON.stringify(loadArr))
 
+}
 }
 
 function saveHighScores(){
+
 winnerCount = "winner"+listCount
     var name = document.getElementsByClassName("Nickname")[0].value;
 var currentObj = name+": "+score;
 loadArr.push(JSON.stringify(currentObj));
     localStorage.setItem("pastWinners",JSON.stringify(loadArr))
+   document.getElementsByClassName("sumbitScore")[0].style.display = "none";
+    var restart = confirm("Would you like to try again?")
+    if (restart){
+        location.reload();
+    }
+
 }
