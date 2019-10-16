@@ -24,6 +24,10 @@ Format: ![Quiz Start](images/quizQuestions.jpeg)
 
 Format: ![Quiz Start](images/quizScore.jpeg)
 
+4) You will need to retake the quiz to see the latest updates. 
+
+Format: ![Quiz Start](images/latestUpdate1.jpeg)
+Format: ![Quiz Start](images/latestUpdate2.jpeg)
 -------- Section 3 - Instructions ------------
 
 Questions are built with a button create function so creating additional questions is quite easy. You just add another question object to the questions object and the new questions will be created and displayed as part of the quiz. Your new score will be out of 9. 
