@@ -255,7 +255,7 @@ document.getElementsByClassName("scoreText")[0].innerHTML= "You got "+score + " 
 function loadHighScores(){
 currentLS = localStorage;
 var count = 0;
-if (localStorage != null && localStorage != undefined){
+if (localStorage.length>0){
 loadArr = JSON.parse(localStorage.getItem("pastWinners"))
 for (item in loadArr){
     ulEl = document.getElementsByClassName("winList")[0];
@@ -268,21 +268,23 @@ for (item in loadArr){
 }else{
     loadArr = [];
     localStorage.setItem("pastWinners",JSON.stringify(loadArr))
-
+console.log("test");
 }
 }
 
 function saveHighScores(){
 
-winnerCount = "winner"+listCount
+winnerCount = "winner"+listCount;
     var name = document.getElementsByClassName("Nickname")[0].value;
 var currentObj = name+": "+score;
 loadArr.push(JSON.stringify(currentObj));
-    localStorage.setItem("pastWinners",JSON.stringify(loadArr))
+    localStorage.setItem("pastWinners",JSON.stringify(loadArr));
+    
    document.getElementsByClassName("sumbitScore")[0].style.display = "none";
-    var restart = confirm("Would you like to try again?")
+    var restart = confirm("Would you like to try again?");
     if (restart){
         location.reload();
-    }
+    };
+    
 
 }
