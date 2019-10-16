@@ -14,20 +14,20 @@ On this website, you will find a coding quiz that allows the user to take a quiz
 
 1) Please click the "Start Quiz" button. 
 
-Format: ![Quiz Start](images/quizButton.jpeg)
+![Quiz Start](images/quizButton.jpg)
 
 2) Answer the questions that are asked and do your best to get 100%!
 
-Format: ![Quiz Start](images/quizQuestions.jpeg)
+![Quiz Start](images/quizQuestions.jpg)
 
 3) At the end, fill in your intials to save your high score!
 
-Format: ![Quiz Start](images/quizScore.jpeg)
+![Quiz Start](images/quizScore.jpg)
 
 4) You will need to retake the quiz to see the latest updates. 
 
-Format: ![Quiz Start](images/latestUpdate1.jpeg)
-Format: ![Quiz Start](images/latestUpdate2.jpeg)
+![Quiz Start](images/latestUpdate1.jpg)
+![Quiz Start](images/latestUpdate2.jpg)
 -------- Section 3 - Instructions ------------
 
 Questions are built with a button create function so creating additional questions is quite easy. You just add another question object to the questions object and the new questions will be created and displayed as part of the quiz. Your new score will be out of 9. 
